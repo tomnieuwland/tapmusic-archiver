@@ -29,7 +29,7 @@ Archives will be stored under the root level of the given bucket, in a directory
 ## Why you should use this tool
 
 2 reasons:
-- You have an archive of all collages without any human iteraction from the moment the function is deployed onwards
+- You have an archive of all collages without any human interaction from the moment the function is deployed onwards
 - You can use a hardlinked url that will dynamically update once a week/once a month in the form of the `current_week` image
   
   For example: the url for my "current week" image can be found here: https://tomnieuwland-public.s3-ap-southeast-2.amazonaws.com/tapmusic-archiver/current_week.jpg
