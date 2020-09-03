@@ -25,3 +25,17 @@ Optional flags:
 ## Accessing archives
 
 Archives will be stored under the root level of the given bucket, in a directory called `tapmusic-archiver`
+
+## Why you should use this tool
+
+2 reasons:
+- You have an archive of all collages without any human iteraction from the moment the function is deployed onwards
+- You can use a hardlinked url that will dynamically update once a week/once a month in the form of the `current_week` image
+  For example: the url for my "current week" image can be found here: https://tomnieuwland-public.s3-ap-southeast-2.amazonaws.com/tapmusic-archiver/current_week.jpg
+  If I hardlink this into the readme below...
+  ![Current Week](https://tomnieuwland-public.s3-ap-southeast-2.amazonaws.com/tapmusic-archiver/current_week.jpg)
+  This will ALWAYS show what I've been listening to in the past week!
+
+## Support
+
+Don't support me, support the guys over at [TapMusic](https://www.tapmusic.net/)
