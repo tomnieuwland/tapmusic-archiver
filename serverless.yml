@@ -15,7 +15,12 @@ provider:
       Action:
         - s3:PutObject
         - s3:PutObjectAcl
-      Resource: "arn:aws:s3:::${opt:bucket}/*"
+      Resource: 
+        Fn::Join:
+        - ""
+        - - "arn:aws:s3:::"
+          - ${opt:bucket}
+          - "/*"
 
 functions:
   tapmusic-archiver-weekly:
