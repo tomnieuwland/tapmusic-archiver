@@ -1,0 +1,20 @@
+{
+  "name": "tapmusic-archiver",
+  "version": "1.0.0",
+  "description": "AWS Lambda Functions for saving TapMusic collages to S3 weekly and monthly",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tapmusic",
+    "s3",
+    "aws"
+  ],
+  "author": "Tom Nieuwland <thomasnieuwland19@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.745.0",
+    "node-fetch": "^2.6.0"
+  }
+}

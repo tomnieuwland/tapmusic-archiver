@@ -1,0 +1,35 @@
+service: tapmusic-archiver
+frameworkVersion: '1'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+  stage: ${opt:stage, 'prod'}
+  region: ${opt:region, 'ap-southeast-2'}
+  timeout: 60
+  memorySize: 256
+  
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:PutObject
+        - s3:PutObjectAcl
+      Resource: "arn:aws:s3:::${opt:bucket}/*"
+
+functions:
+  tapmusic-archiver-weekly:
+    handler: handler.weekly
+    events:
+     - schedule: cron(0 0 ? * SUN *)
+    environment:
+      S3_BUCKET: ${opt:bucket}
+      LASTFM_USER: ${opt:lastfmuser}
+
+  tapmusic-archiver-monthly:
+    handler: handler.monthly
+    events:
+     - schedule: cron(0 0 1 * ? *)
+    environment:
+      S3_BUCKET: ${opt:bucket}
+      LASTFM_USER: ${opt:lastfmuser}
