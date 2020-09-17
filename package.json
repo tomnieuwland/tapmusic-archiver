@@ -1,6 +1,6 @@
 {
   "name": "tapmusic-archiver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AWS Lambda Functions for saving TapMusic collages to S3 weekly and monthly",
   "main": "handler.js",
   "scripts": {

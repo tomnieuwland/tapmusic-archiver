@@ -41,7 +41,8 @@ async function copyS3Object(bucket, srcpath, destpath){
   var params = {
     Bucket: bucket, 
     CopySource: `/${bucket}/${srcpath}`, 
-    Key: destpath
+    Key: destpath,
+    ACL: 'public-read'
    };
 
    return s3.copyObject(params).promise()
