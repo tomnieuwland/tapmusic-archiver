@@ -5,7 +5,7 @@ const AWS = require('aws-sdk');
 const { resolve } = require('path');
 
 function generateTapMusicURL(lastfmUser, tapMusicType, tapMusicSize){
-  return `https://www.tapmusic.net/collage.php?user=${lastfmUser}&type=${tapMusicType}&size=${tapMusicSize}&caption=true`;
+  return `https://tapmusic.net/collage.php?user=${lastfmUser}&type=${tapMusicType}&size=${tapMusicSize}&caption=true`;
 }
 
 async function getTapMusicCollage(lastfmUser, tapMusicType, tapMusicSize){
